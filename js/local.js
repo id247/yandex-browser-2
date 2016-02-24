@@ -1,33 +1,24 @@
-'use strict'
+;(function(){
+	document.addEventListener("DOMContentLoaded", function(){
 
-import app from './app';
+		var syb = document.getElementById('syb');
+		var sybHeight = syb.offsetHeight;
+		var winHeight = window.innerHeight;
 
-const appSettings = {
+		console.log(syb);
+		console.log(sybHeight);
+		console.log(winHeight);
 
-	API: {
-		groupId: 32880,
-		folderId: 82619,
-		server: 'staging.x.dnevnik.ru',
-		cookieName: 'local_calendar_token',
-		scope: 'Files,SocialEntityMembership',	
-		clientId: '5123975fe9eb415390fb7aa316a15e4e',
-		clienSecret: '367159aba7ba4a1e8b2483ebfea22435',
-		modalRedirectUrl: '//localhost:9000/oauth.html',
-		redirectUrl: '//localhost:9000/',
-		develop: true
-	},
+		function setHeight(){
+			if (sybHeight < winHeight){
+				syb.style.height = (winHeight - 160) + 'px';
+			}else{
+				syb.style.height = '';
+			}
+		}
+		setHeight();
 
-	calendar: {
-		cdn: '',
-		groupLink: 'https://groups.dnevnik.ru/group.aspx?group=316373',
-		folderLink: 'https://groups.dnevnik.ru/group.aspx?group=316373&view=files&folder=2631891',
-		develop: true
-	}
-}
-
-//start the magic
-document.addEventListener("DOMContentLoaded", () => {
-
-	app.init(appSettings);
-
-});   
+		window.addEventListener('resize', setHeight);
+	
+	}); 
+})(); 
