@@ -15,12 +15,24 @@
 		<div class="syb__content">
 
 			<div class="syb__recomend">
+				@@if (server !== "mosreg"){
 				Дневник.ру рекомендует
+				}
+				@@if (server == "mosreg"){
+				Школьный Портал рекомендует
+				}
 			</div><!-- /.syb__recomend -->
 
 			<div class="syb__title">
 				Cпециальная версия <span class="syb__title-yandex">Яндекс.Браузера</span><br />
+
+				@@if (server !== "mosreg"){
 				с Дневник.ру
+				}
+				@@if (server == "mosreg"){
+				для Школьного Портала
+				}
+				
 			</div><!-- /.syb__title -->
 
 			<div class="syb__links syb-links">
@@ -29,12 +41,12 @@
 					
 					<li class="syb-links__item">
 				
-						<a href="#" class="syb-links__href syb-links__href--desktop">
+						<a href="http://download.cdn.yandex.net/downloadable_soft/browser/350734/Yandex.exe?vid=30&hash=8e5dc90ddbc9f3a7884c1757aa6ebc0c&.exe" class="syb-links__href syb-links__href--desktop syb-links__href--win" target="_self">
 							<span class="syb-links__href-top">
 								Скачать
 							</span>
 							<span class="syb-links__href-bottom">
-								для компьютера
+								для Windows
 							</span>
 						</a>
 				
@@ -42,7 +54,20 @@
 					
 					<li class="syb-links__item">
 				
-						<a href="#" class="syb-links__href syb-links__href--google-play">
+						<a href="http://download.cdn.yandex.net/downloadable_soft/browser/351033/Yandex.dmg" class="syb-links__href syb-links__href--desktop syb-links__href--mac" target="_self">
+							<span class="syb-links__href-top">
+								Скачать
+							</span>
+							<span class="syb-links__href-bottom">
+								для MacOS
+							</span>
+						</a>
+				
+					</li> <!-- /.syb-links__item -->
+					
+					<li class="syb-links__item">
+				
+						<a href="https://211837.measurementapi.com/serve?action=click&publisher_id=211837&site_id=50120" class="syb-links__href syb-links__href--google-play" target="_blank">
 							Google Play
 						</a>
 
@@ -55,7 +80,7 @@
 					
 					<li class="syb-links__item">
 				
-						<a href="#" class="syb-links__href syb-links__href--appstore">
+						<a href="https://211837.measurementapi.com/serve?action=click&publisher_id=211837&site_id=50360" class="syb-links__href syb-links__href--appstore" target="_blank">
 							App Store
 						</a>
 
@@ -71,12 +96,13 @@
 
 		</div><!-- /.syb__content -->
 		
-		<div class="syb__notebook syb-notebook">
+		<div class="syb__notebook syb-notebook @@if (server !== "mosreg"){syb-notebook--dnevnik} @@if (server == "mosreg"){syb-notebook--mosreg}">
 
 			<div class="syb-notebook__text-placeholder syb-notebook__text-placeholder--1">
 			
 				<div class="syb-notebook__text syb-notebook__text--1">
 					<p>
+					@@if (server !== "mosreg"){
 						Виджеты, для 
 						быстрого и&nbsp;удобного 
 						доступа к&nbsp;основному 
@@ -84,7 +110,18 @@
 						функционалу Дневника 
 						для&nbsp;учителей
 						и&nbsp;учеников прямо
-						на уроке. 
+						на&nbsp;уроке. 
+					}
+					@@if (server == "mosreg"){
+					Виджеты, для 
+						быстрого и&nbsp;удобного 
+						доступа к&nbsp;основному 
+						школьному 
+						функционалу Школьного&nbsp;Портала 
+						для&nbsp;учителей
+						и&nbsp;учеников прямо
+						на&nbsp;уроке. 
+					}
 					</p>
 				</div><!-- /.syb-notebook__text -->
 
