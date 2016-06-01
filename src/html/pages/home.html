@@ -1,12 +1,7 @@
 
 <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,400italic,700,500&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
-@@if (server !== "local"){
-<link rel="stylesheet" href="https://ad.csdnevnik.ru/special/staging/yandex-browser-2/css/style.css">
-}
-@@if (server === "local"){
-<link rel="stylesheet" href="css/style.css">
-}
+<link rel="stylesheet" href="assets/css/style.css">
 
 <div class="syb" id="syb">
 	
@@ -24,13 +19,14 @@
 			</div><!-- /.syb__recomend -->
 
 			<div class="syb__title">
-				Cпециальная версия <span class="syb__title-yandex">Яндекс.Браузера</span><br />
-
 				@@if (server !== "mosreg"){
+				Cпециальная версия <span class="syb__title-yandex">Яндекс.Браузера</span><br />
 				с Дневник.ру
 				}
+
 				@@if (server == "mosreg"){
-				для Школьного Портала
+				Проверяйте ваш дневник с удовольствием! <br>
+				Специальная версия для работы со <span class="syb__title-yandex">Школьным порталом</span> .
 				}
 				
 			</div><!-- /.syb__title -->
@@ -67,7 +63,7 @@
 					
 					<li class="syb-links__item">
 				
-						<a href="https://211837.measurementapi.com/serve?action=click&publisher_id=211837&site_id=50120" class="syb-links__href syb-links__href--google-play" target="_blank">
+						<a href="https://211837.measurementapi.com/serve?action=click&publisher_id=211837&site_id=50120&destination_id=50762" class="syb-links__href syb-links__href--google-play" target="_blank">
 							Google Play
 						</a>
 
@@ -86,6 +82,18 @@
 
 						<div class="syb-links__text">
 							для iPhone с iOS 7.0 и выше
+						</div><!-- /.syb-links__text -->
+				
+					</li> <!-- /.syb-links__item -->
+					
+					<li class="syb-links__item">
+				
+						<a href="https://211837.measurementapi.com/serve?action=click&publisher_id=211837&site_id=50356" class="syb-links__href syb-links__href--appstore" target="_blank">
+							App Store
+						</a>
+
+						<div class="syb-links__text">
+							для iPad с iOS 7.0 и выше
 						</div><!-- /.syb-links__text -->
 				
 					</li> <!-- /.syb-links__item -->
@@ -153,9 +161,5 @@
 
 </div><!-- /.syb -->
 
-@@if (server !== "local"){
-<script src="https://ad.csdnevnik.ru/special/staging/yandex-browser-2/js/script.js"></script>
-}
-@@if (server === "local"){
-<script src="js/script.js"></script>
-}
+
+<script src="assets/js/syb-script.js"></script>
