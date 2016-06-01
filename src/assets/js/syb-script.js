@@ -9,7 +9,7 @@
 			var winHeight = window.innerHeight;
 			
 			if (sybHeight < winHeight){
-				syb.style.height = (winHeight - 160 - 120) + 'px';
+				syb.style.minHeight = (winHeight - 160 - 120) + 'px';
 			}
 		}
 		setHeight();
